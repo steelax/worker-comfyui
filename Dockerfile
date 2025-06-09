@@ -88,7 +88,7 @@ RUN mkdir -p models/checkpoints models/vae models/unet models/clip
 
 # Download checkpoints/vae/unet/clip models to include in image based on model type
 RUN if [ "$MODEL_TYPE" = "sdxl" ]; then \
-      wget -q -O models/checkpoints/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors https://huggingface.co/RunDiffusion/Juggernaut-XL-v9/resolve/main/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors
+      wget -q --header="Authorization: Bearer ${HUGGINGFACE_ACCESS_TOKEN}" -O models/checkpoints/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors https://huggingface.co/RunDiffusion/Juggernaut-XL-v9/resolve/main/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors
     fi
 
 RUN if [ "$MODEL_TYPE" = "sd3" ]; then \
