@@ -84,11 +84,10 @@ WORKDIR /comfyui
 # Create necessary directories upfront
 RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/instantid models/controlnet models/ipadapter custom_nodes
 
-RUN git clone https://github.com/cubiq/ComfyUI_InstantID custom_nodes
-RUN git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus custom_nodes
-RUN git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes
-RUN git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes
-run git clone https://github.com/cubiq/ComfyUI_essentials
+RUN git clone git@github.com:cubiq/ComfyUI_InstantID.git custom_nodes
+RUN git clone git@github.com:cubiq/ComfyUI_IPAdapter_plus.git custom_nodes
+RUN git clone git@github.com:Derfuu/Derfuu_ComfyUI_ModdedNodes.git custom_nodes
+RUN git clone git@github.com:cubiq/ComfyUI_essentials.git custom_nodes
 
 # Download checkpoints/vae/unet/clip models to include in image based on model type
 
