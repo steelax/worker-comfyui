@@ -116,3 +116,5 @@ FROM base AS final
 COPY --from=downloader /comfyui/models /comfyui/models
 
 COPY --from=downloader /comfyui/custom_nodes /comfyui/custom_nodes
+
+RUN export BUCKET_ENDPOINT_URL=https://podlax.s3.eu-west-2.amazonaws.com/
