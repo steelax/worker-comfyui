@@ -82,7 +82,7 @@ ARG HUGGINGFACE_ACCESS_TOKEN
 WORKDIR /comfyui
 
 # Create necessary directories upfront
-RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/instantid models/controlnet models/ipadapter custom_nodes
+RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/controlnet models/ipadapter custom_nodes
 
 
 
