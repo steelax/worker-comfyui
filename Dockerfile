@@ -114,3 +114,5 @@ FROM base AS final
 
 # Copy models from stage 2 to the final image
 COPY --from=downloader /comfyui/models /comfyui/models
+
+COPY --from=downloader /comfyui/custom_nodes /comfyui/custom_nodes
