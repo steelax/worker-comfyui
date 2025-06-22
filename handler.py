@@ -1,3 +1,4 @@
+from urllib.parse import urlparse
 import runpod
 from runpod.serverless.utils import rp_upload
 import json
@@ -43,6 +44,31 @@ REFRESH_WORKER = os.environ.get("REFRESH_WORKER", "false").lower() == "true"
 # Helper: quick reachability probe of ComfyUI HTTP endpoint (port 8188)
 # ---------------------------------------------------------------------------
 
+
+def s3_url_to_base64(s3_url):
+    """
+    Fetches an image from the given S3 URL and converts it to a Base64 string.
+    """
+
+    # Parse the URL to get bucket name, object key, and region
+    parsed_url = urlparse(s3_url)
+
+    # Extract the path components
+    path_parts = parsed_url.path.strip('/').split('/', 1)
+    bucket_name = path_parts[0]
+    object_key = path_parts[1] if len(path_parts) > 1 else ''
+
+    # Fetch the image from S3 using requests (this works for public URLs)
+    response = requests.get(s3_url)
+
+    # Check if request was successful
+    if response.status_code == 200:
+        # Read the content and encode it to base64
+        image_data = response.content
+        encoded_string = base64.b64encode(image_data).decode('utf-8')
+        return encoded_string
+    else:
+        raise Exception(f"Failed to fetch image from S3. Status code: {response.status_code}")
 
 def _comfy_server_status():
     """Return a dictionary with basic reachability info for the ComfyUI HTTP server."""
