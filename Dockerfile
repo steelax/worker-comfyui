@@ -82,7 +82,7 @@ ARG HUGGINGFACE_ACCESS_TOKEN
 WORKDIR /comfyui
 
 # Create necessary directories upfront
-RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/controlnet models/ipadapter custom_nodes
+RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/instantid models/controlnet models/ipadapter custom_nodes
 
 
 
@@ -99,7 +99,7 @@ RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom
 
 RUN wget -q -O models/checkpoints/DreamShaperXL.safetensors https://huggingface.co/Lykon/DreamShaper/resolve/main/DreamShaperXL_Turbo_SFWdpmppSde_half_pruned.safetensors ;
 
-RUN wget -q -O models/instantid/SDXL/ip-adapter.bin https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin && \
+RUN wget -q -O models/instantid/ip-adapter.bin https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin && \
     wget -q -O models/insightface/models/antelopev2/1k3d68.onnx https://huggingface.co/MonsterMMORPG/tools/resolve/main/1k3d68.onnx && \
     wget -q -O models/insightface/models/antelopev2/2d106det.onnx https://huggingface.co/MonsterMMORPG/tools/resolve/main/2d106det.onnx && \
     wget -q -O models/insightface/models/antelopev2/genderage.onnx https://huggingface.co/MonsterMMORPG/tools/resolve/main/genderage.onnx && \
