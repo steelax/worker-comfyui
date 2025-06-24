@@ -93,7 +93,10 @@ RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
 RUN git clone https://github.com/Gourieff/ComfyUI-ReActor.git custom_nodes/ComfyUI-ReActor
 
+RUN df -l
+
 RUN mv /runpod-volume/sd/extra_model_paths.yaml /comfyui/
+
 
 
 # Stage 3: Final image
