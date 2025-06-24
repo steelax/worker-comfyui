@@ -10,7 +10,7 @@
           },
           {
             "name": "r.png",
-            "image": ""},
+            "image": ""}
         ],
         "workflow": {
   "3": {
@@ -602,5 +602,4 @@
       "title": "🔧 Image Resize"
     }
   }
-}
 }
