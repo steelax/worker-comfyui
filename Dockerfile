@@ -95,7 +95,7 @@ RUN git clone https://github.com/Gourieff/ComfyUI-ReActor.git custom_nodes/Comfy
 
 RUN df -l
 
-RUN mv /runpod-volume/sd/extra_model_paths.yaml /comfyui/
+RUN mv /workspace/sd/extra_model_paths.yaml /comfyui/
 
 
 
