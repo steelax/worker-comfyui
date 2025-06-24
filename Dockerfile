@@ -65,6 +65,7 @@ RUN chmod +x /usr/local/bin/comfy-node-install
 
 # Prevent pip from asking for confirmation during uninstall steps in custom nodes
 ENV PIP_NO_INPUT=1
+
 RUN pip install insightface
 
 # Copy helper script to switch Manager network mode at container start
