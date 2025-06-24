@@ -95,6 +95,7 @@ RUN git clone https://github.com/Gourieff/ComfyUI-ReActor.git custom_nodes/Comfy
 
 RUN mv /runpod-volume/sd/extra_model_paths.yaml /comfyui/
 
+
 # Stage 3: Final image
 FROM base AS final
 # Copy models from stage 2 to the final image
