@@ -94,7 +94,7 @@ RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom
 RUN git clone https://github.com/Gourieff/ComfyUI-ReActor.git custom_nodes/ComfyUI-ReActor
 
 
-COPY /runpod-volume/sd/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
+COPY /workspace/sd/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
 
 
 # Stage 3: Final image
