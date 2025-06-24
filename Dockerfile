@@ -97,7 +97,6 @@ RUN mv /workspace/sd/extra_model_paths.yaml /comfyui/
 
 # Stage 3: Final image
 FROM base AS final
-
 # Copy models from stage 2 to the final image
 COPY --from=downloader /comfyui/models /comfyui/models
 
