@@ -42,6 +42,8 @@ ENV PATH="/opt/venv/bin:${PATH}"
 # Install comfy-cli + dependencies needed by it to install ComfyUI
 RUN uv pip install comfy-cli pip setuptools wheel opencv-python
 
+RUN wget https://github.com/Gourieff/Assets/blob/main/Insightface/insightface-0.7.3-cp312-cp312-win_amd64.whl
+RUN pip install insightface-0.7.3-cp312-cp312-win_amd64.whl
 # Install ComfyUI
 RUN /usr/bin/yes | comfy --workspace /comfyui install --version 0.3.30 --cuda-version 12.6 --nvidia
 
@@ -63,7 +65,6 @@ RUN chmod +x /start.sh
 # Install Python runtime dependencies for the handler
 RUN uv pip install runpod requests websocket-client
 
-RUN pip install insightface
 RUN pip install onnxruntime
 # Add script to install custom nodes
 COPY scripts/comfy-node-install.sh /usr/local/bin/comfy-node-install
