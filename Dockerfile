@@ -42,8 +42,8 @@ ENV PATH="/opt/venv/bin:${PATH}"
 # Install comfy-cli + dependencies needed by it to install ComfyUI
 RUN uv pip install comfy-cli pip setuptools wheel opencv-python
 
-RUN wget https://github.com/Gourieff/Assets/blob/main/Insightface/insightface-0.7.3-cp312-cp312-win_amd64.whl
-RUN pip install insightface-0.7.3-cp312-cp312-win_amd64.whl
+RUN wget https://huggingface.co/AlienMachineAI/insightface-0.7.3-cp312-cp312-linux_x86_64.whl/resolve/main/insightface-0.7.3-cp312-cp312-linux_x86_64.whl
+RUN pip install insightface-0.7.3-cp312-cp312-linux_x86_64.whl
 # Install ComfyUI
 RUN /usr/bin/yes | comfy --workspace /comfyui install --version 0.3.30 --cuda-version 12.6 --nvidia
 
