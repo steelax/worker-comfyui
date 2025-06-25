@@ -11,7 +11,7 @@ ENV PYTHONUNBUFFERED=1
 ENV CMAKE_BUILD_PARALLEL_LEVEL=8
 
 
-RUN apt install build-essential
+RUN apt update && apt install -y build-essential
 # Install Python, git and other necessary tools
 RUN apt-get update && apt-get install -y \
     python3.12 \
