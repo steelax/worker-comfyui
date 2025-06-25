@@ -10,6 +10,8 @@ ENV PYTHONUNBUFFERED=1
 # Speed up some cmake builds
 ENV CMAKE_BUILD_PARALLEL_LEVEL=8
 
+
+RUN apt update && apt install -y build-essential
 # Install Python, git and other necessary tools
 RUN apt-get update && apt-get install -y \
     python3.12 \
@@ -61,7 +63,7 @@ RUN chmod +x /start.sh
 # Install Python runtime dependencies for the handler
 RUN uv pip install runpod requests websocket-client
 
-RUN pip install insightface
+RUN pip install insightface==0.7.3
 RUN pip install onnxruntime
 # Add script to install custom nodes
 COPY scripts/comfy-node-install.sh /usr/local/bin/comfy-node-install
