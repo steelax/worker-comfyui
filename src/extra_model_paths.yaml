@@ -14,3 +14,4 @@ runpod_worker_comfy:
   ipadapter: models/ipadapter/
   rembg: models/rembg/
   clipseg: models/clipseg/
+  insightface: models/insightface/
