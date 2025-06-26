@@ -96,8 +96,7 @@ WORKDIR /comfyui
 # Create necessary directories upfront
 RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/instantid models/controlnet models/ipadapter custom_nodes
 
-RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip /models/insightface/models
-RUN unzip /models/instightface/models/anteloprv2.zip
+
 
 RUN git clone https://github.com/cubiq/ComfyUI_InstantID.git custom_nodes/ComfyUI_InstantID
 RUN git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus.git custom_nodes/ComfyUI_IPAdapter_plus
@@ -108,6 +107,10 @@ RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
 RUN git clone https://github.com/Gourieff/ComfyUI-ReActor.git custom_nodes/ComfyUI-ReActor
 
+
+WORKDIR /comfyui/models/insightface/models
+RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip
+RUN unzip anteloprv2.zip
 #COPY /runpod-volume/sd/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
 
 
