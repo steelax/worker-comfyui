@@ -110,7 +110,7 @@ RUN git clone https://github.com/Gourieff/ComfyUI-ReActor.git custom_nodes/Comfy
 
 WORKDIR /comfyui/models/insightface/models
 RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip
-RUN unzip anteloprv2.zip
+RUN unzip antelopev2.zip
 #COPY /runpod-volume/sd/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
 
 
