@@ -43,6 +43,7 @@ ENV PATH="/opt/venv/bin:${PATH}"
 RUN uv pip install comfy-cli pip setuptools wheel opencv-python
 
 RUN wget https://huggingface.co/AlienMachineAI/insightface-0.7.3-cp312-cp312-linux_x86_64.whl/resolve/main/insightface-0.7.3-cp312-cp312-linux_x86_64.whl
+RUN pip uninstall insightface
 RUN pip install insightface-0.7.3-cp312-cp312-linux_x86_64.whl
 # Install ComfyUI
 RUN /usr/bin/yes | comfy --workspace /comfyui install --version 0.3.30 --cuda-version 12.6 --nvidia
@@ -98,8 +99,8 @@ RUN git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git custom_no
 RUN git clone https://github.com/cubiq/ComfyUI_essentials.git custom_nodes/ComfyUI_essentials
 RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git custom_nodes/comfyui_controlnet_aux
 RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
-RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
-
+RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git /ComfyUI-load-image-from-url
+custom_nodes
 #COPY /runpod-volume/sd/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
 
 
