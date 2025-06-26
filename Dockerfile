@@ -106,6 +106,7 @@ RUN git clone https://github.com/cubiq/ComfyUI_essentials.git custom_nodes/Comfy
 RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git custom_nodes/comfyui_controlnet_aux
 RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
+RUN git clone https://github.com/Gourieff/ComfyUI-ReActor.git custom_nodes/ComfyUI-ReActor
 
 #COPY /runpod-volume/sd/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
 
