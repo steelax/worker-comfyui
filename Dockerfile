@@ -51,6 +51,9 @@ RUN /usr/bin/yes | comfy --workspace /comfyui install --version 0.3.30 --cuda-ve
 # Change working directory to ComfyUI
 WORKDIR /comfyui
 
+
+
+
 # Support for the network volume
 ADD src/extra_model_paths.yaml ./
 
@@ -92,6 +95,9 @@ WORKDIR /comfyui
 
 # Create necessary directories upfront
 RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/instantid models/controlnet models/ipadapter custom_nodes
+
+RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip /models/insightface/models
+RUN unzip /models/instightface/models/anteloprv2.zip
 
 RUN git clone https://github.com/cubiq/ComfyUI_InstantID.git custom_nodes/ComfyUI_InstantID
 RUN git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus.git custom_nodes/ComfyUI_IPAdapter_plus
