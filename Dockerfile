@@ -94,7 +94,7 @@ WORKDIR /comfyui
 # Create necessary directories upfront
 RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/instantid models/controlnet models/ipadapter custom_nodes
 
-RUN cp /runpod_volume/sd/custom_nodes/ /custom_nodes -r
+RUN cp /runpod_volume/sd/custom_nodes/ / -r
 
 WORKDIR /comfyui/models/insightface/models
 RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip
