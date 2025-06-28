@@ -80,11 +80,7 @@ ENV PIP_NO_INPUT=1
 COPY scripts/comfy-manager-set-mode.sh /usr/local/bin/comfy-manager-set-mode
 RUN chmod +x /usr/local/bin/comfy-manager-set-mode
 
-# Set the default command to run when starting the container
-CMD ["/start.sh"]
-
-# Stage 2: Download models
-FROM base AS downloader
+# Set the default command to run when starting the containe
 
 ARG HUGGINGFACE_ACCESS_TOKEN
 
@@ -94,19 +90,10 @@ WORKDIR /comfyui
 # Create necessary directories upfront
 RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/instantid models/controlnet models/ipadapter custom_nodes
 
-RUN cp /runpod_volume/sd/custom_nodes/ / -r
-
 WORKDIR /comfyui/models/insightface/models
 RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip
 RUN unzip antelopev2.zip
-#COPY /runpod-volume/sd/extra_model_paths.yaml /comfyui/extra_model_paths.yaml
-
-
-# Stage 3: Final image
-FROM base AS final
-# Copy models from stage 2 to the final image
-COPY --from=downloader /comfyui/models /comfyui/models
-
-COPY --from=downloader /comfyui/custom_nodes /comfyui/custom_nodes
 
 RUN export BUCKET_ENDPOINT_URL=https://podlax.s3.eu-west-2.amazonaws.com/
+
+CMD ["/start.sh"]
