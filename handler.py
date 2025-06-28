@@ -711,7 +711,7 @@ def handler(job):
                                         print(
                                             f"worker-comfyui - Error removing temp file {temp_file_path}: {rm_err}"
                                         )
-                            return_base = False
+                            return False
 
                         if os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"):
                                 print("firebase_env_var_found")

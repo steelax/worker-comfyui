@@ -65,7 +65,7 @@ ADD src/start.sh test_input.json ./
 RUN chmod +x /start.sh
 
 # Install Python runtime dependencies for the handler
-RUN uv pip install runpod requests websocket-client
+RUN uv pip install runpod requests websocket-client firebase-admin
 
 RUN pip install onnxruntime
 # Add script to install custom nodes
