@@ -30,10 +30,6 @@ else
 
   echo "INITIALISATION worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store"
 
-  echo "INITIALISATION worker-comfyui: Getting Latest Scripts from git"
-  wget -O /launch_comfy.sh https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/src/launch_comfy.sh
-
- ls /comfyui/models/checkpoints
 
   echo "INITIALISATION worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store";
 
