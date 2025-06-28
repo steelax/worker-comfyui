@@ -92,7 +92,7 @@ RUN git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git custom_no
 RUN git clone https://github.com/cubiq/ComfyUI_essentials.git custom_nodes/ComfyUI_essentials
 RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
-
+RUN git clone https://github.com/kenneth2001/comfyui_controlnet_preprocessors custom_nodes/comfyui_controlnet_preprocessors
 
 WORKDIR /comfyui/models/insightface/models
 RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip
