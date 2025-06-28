@@ -24,10 +24,7 @@ def upload_to_firebase(bucket_url, data, destination_blob_name, cert):
     """Uploads a file to the bucket from Base64 string."""
     print(destination_blob_name)
     initialize_firebase(json_credentials,bucket_url)
-    cred = credentials.Certificate(json_credentials)
-    firebase_admin.initialize_app(cred, {
-        'storageBucket': bucket_url
-    })
+
 
     # Get the storage bucket
     bucket = storage.bucket()
