@@ -20,27 +20,16 @@ else
 
   echo "INITIALISATION worker-comfyui: Getting Latest Scripts from Network Store"
   wget -O /cert.json https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/cert.json
-  cp /cert.json /runpod_volume/sd/scripts/cert.json
   echo "INITIALISATION worker-comfyui: handler.py updated"
 
   wget -O /rp_firebase_upload.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/rp_firebase_upload.py
-  cp /rp_firebase_upload.py /runpod_volume/sd/scripts/rp_firebase_upload.py
   echo "INITIALISATION -comfyui: rp_firebase_upload.py updated"
 
-  echo "Getting Dirs"
-  ls /runpod-volume/sd
-  echo "Getting Dirs 2"
-  ls /runpod-volume/sd/custom_nodes
-  echo "Getting Dirs 3"
-  ls /comfyui/
-
   wget -O /handler.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/handler.py
-  cp /handler.py /runpod_volume/sd/scripts/handler.py
   echo "INITIALISATION worker-comfyui: handler.py updated"
   echo "INITIALISATION worker-comfyui: COMPLETE: Getting Latest Scripts from Network Store"
 
-  echo "INITIALISATION worker-comfyui: Copying Custom Nodes from Network Store"
-  cp /runpod_volume/sd/custom_nodes/ / -r
+
   echo "INITIALISATION worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store"
 
   echo "INITIALISATION worker-comfyui: Getting Latest Scripts from git"
@@ -50,6 +39,8 @@ else
 
   echo "INITIALISATION worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store";
 
-  /launch_comfy.sh;
+  python -u /comfyui/main.py --disable-auto-launch --disable-metadata --verbose "${COMFY_LOG_LEVEL}" --log-stdout &
+  echo "LAUNCHER worker-comfyui: Starting RunPod Handler"
+  python -u /handler.py
 
 fi
