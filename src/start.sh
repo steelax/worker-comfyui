@@ -7,12 +7,8 @@ export LD_PRELOAD="${TCMALLOC}"
 # Ensure ComfyUI-Manager runs in offline network mode inside the container
 comfy-manager-set-mode offline || echo "worker-comfyui - Could not set ComfyUI-Manager network_mode" >&2
 
+df -l
 echo "worker-comfyui: Getting Latest Scripts from Network Store"
-wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/handler.py
-echo "worker-comfyui: handler.py updated"
-wget -O /rp_firebase_upload.py https://github.com/steelax/worker-comfyui/blob/firebase/rp_firebase_upload.py
-echo "worker-comfyui: rp_firebase_upload.py updated"
-
 wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/handler.py
 wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/rp_firebase_upload.py
 
