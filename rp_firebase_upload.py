@@ -6,17 +6,24 @@ from firebase_admin import storage
 import base64
 
 
-def file_to_base64(file_path):
-    """Converts the contents of a file to a Base64-encoded string."""
-    with open(file_path, 'rb') as file:
-        encoded_string = base64.b64encode(file.read()).decode('utf-8')
-    return encoded_string
+def initialize_firebase(json_credentials,bucket_url):
+    try:
+        cred = credentials.Certificate(json_credentials)
+        # Try to get the default app to check if it exists
+        firebase_admin.get_app(cred)
+    except ValueError:
+        # If not initialized, then initialize it
+
+        firebase_admin.initialize_app(cred, {
+        'storageBucket': bucket_url
+    })
 
 def upload_to_firebase(bucket_url, data, destination_blob_name, cert):
     base64_version = base64.b64encode(data)
     json_credentials = json.loads(cert)
     """Uploads a file to the bucket from Base64 string."""
     print(destination_blob_name)
+    initialize_firebase(json_credentials,bucket_url)
     cred = credentials.Certificate(json_credentials)
     firebase_admin.initialize_app(cred, {
         'storageBucket': bucket_url
