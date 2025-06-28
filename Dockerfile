@@ -58,13 +58,13 @@ WORKDIR /comfyui
 # Support for the network volume
 ADD src/extra_model_paths.yaml ./
 
+
+
 # Go back to the root
 WORKDIR /
 
-
-
 # Add application code and scripts
-ADD src/start.sh handler.py test_input.json ./
+ADD src/start.sh test_input.json ./
 RUN chmod +x /start.sh
 
 # Install Python runtime dependencies for the handler
