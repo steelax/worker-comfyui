@@ -13,6 +13,8 @@ echo "worker-comfyui: handler.py updated"
 wget -O /rp_firebase_upload.py https://github.com/steelax/worker-comfyui/blob/firebase/rp_firebase_upload.py
 echo "worker-comfyui: rp_firebase_upload.py updated"
 
+wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/handler.py
+
 echo "worker-comfyui: Starting ComfyUI"
 
 # Allow operators to tweak verbosity; default is DEBUG.

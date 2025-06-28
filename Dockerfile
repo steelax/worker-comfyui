@@ -52,9 +52,6 @@ RUN /usr/bin/yes | comfy --workspace /comfyui install --version 0.3.30 --cuda-ve
 # Change working directory to ComfyUI
 WORKDIR /comfyui
 
-
-
-
 # Support for the network volume
 ADD src/extra_model_paths.yaml ./
 
