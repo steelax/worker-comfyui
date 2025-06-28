@@ -10,7 +10,6 @@ ENV PYTHONUNBUFFERED=1
 # Speed up some cmake builds
 ENV CMAKE_BUILD_PARALLEL_LEVEL=8
 
-
 RUN apt update && apt install -y build-essential
 # Install Python, git and other necessary tools
 RUN apt-get update && apt-get install -y \
@@ -86,7 +85,5 @@ WORKDIR /comfyui
 
 # Create necessary directories upfront
 RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/instantid models/controlnet models/ipadapter custom_nodes
-
-RUN export BUCKET_ENDPOINT_URL=https://podlax.s3.eu-west-2.amazonaws.com/
 
 CMD ["/start.sh"]
