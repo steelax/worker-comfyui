@@ -7,8 +7,9 @@ import base64
 
 
 def initialize_firebase(json_credentials,bucket_url):
+    cred = credentials.Certificate(json_credentials)
     try:
-        cred = credentials.Certificate(json_credentials)
+
         # Try to get the default app to check if it exists
         firebase_admin.get_app(cred)
     except ValueError:
