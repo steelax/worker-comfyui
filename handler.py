@@ -492,6 +492,7 @@ def handler(job):
     """
     job_input = job["input"]
     job_id = job["id"]
+    job_user_id = job["input"]["user_id"]
 
     # Make sure that the input is valid
     validated_data, error_message = validate_input(job_input)
