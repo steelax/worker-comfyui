@@ -17,6 +17,8 @@ wget -O /rp_firebase_upload.py https://raw.githubusercontent.com/steelax/worker-
 cp /rp_firebase_upload.py /runpod_volume/sd/rp_firebase_upload.py
 echo "INITIALISATION -comfyui: rp_firebase_upload.py updated"
 
+echo "getting dirs"
+ls /
 
 wget -O /handler.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/handler.py
 cp /handler.py /runpod_volume/sd/handler.py
