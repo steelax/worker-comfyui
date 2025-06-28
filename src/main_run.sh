@@ -39,7 +39,13 @@ else
   cp /runpod_volume/sd/custom_nodes/ / -r
   echo "INITIALISATION worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store"
 
-  python -u /comfyui/main.py --disable-auto-launch --disable-metadata --verbose "${COMFY_LOG_LEVEL}" --log-stdout &
-  echo "worker-comfyui: Starting RunPod Handler"
-  python -u /handler.py
+  echo "INITIALISATION worker-comfyui: Getting Latest Scripts from git"
+  wget -O /launch_comfy.sh https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/src/launch_comfy.sh
+
+  cp /runpod_volume/sd/custom_nodes/ / -r ;
+
+  echo "INITIALISATION worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store";
+
+  /launch_comfy.sh;
+
 fi
