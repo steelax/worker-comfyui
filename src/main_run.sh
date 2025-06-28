@@ -15,6 +15,11 @@ echo "worker-comfyui: handler.py updated"
 wget -O /rp_firebase_upload.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/rp_firebase_upload.py
 cp /rp_firebase_upload.py /runpod_volume/sd/rp_firebase_upload.py
 echo "worker-comfyui: rp_firebase_upload.py updated"
+echo "worker-comfyui: COMPLETE: Getting Latest Scripts from Network Store"
+
+echo "worker-comfyui: Copying Custom Nodes from Network Store"
+cp /runpod_volume/sd/custom_nodes/ / -r
+echo "worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store"
 
 echo "worker-comfyui: Starting ComfyUI"
 # Allow operators to tweak verbosity; default is DEBUG.
