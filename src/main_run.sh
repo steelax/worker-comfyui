@@ -31,6 +31,8 @@ else
   ls /runpod-volume/sd
   echo "Getting Dirs 2"
   ls /runpod-volume/sd/custom_nodes
+  echo "Getting Dirs 3"
+  ls /runpod-volume/sd/scripts
 
   wget -O /handler.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/handler.py
   cp /handler.py /runpod_volume/sd/scripts/handler.py
