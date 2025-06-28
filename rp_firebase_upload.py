@@ -12,7 +12,7 @@ def file_to_base64(file_path):
 
 def upload_to_firebase(bucket, data, destination_blob_name, cert_file='/runpod_volume/sd/scripts/cert.json'):
     """Uploads a file to the bucket from Base64 string."""
-
+    print(destination_blob_name)
     cred = credentials.Certificate(cert_file)
     firebase_admin.initialize_app(cred, {
         'storageBucket': bucket
@@ -29,7 +29,7 @@ def upload_to_firebase(bucket, data, destination_blob_name, cert_file='/runpod_v
         blob = bucket.blob(destination_blob_name)
 
         # Upload binary data from string
-        blob.upload_from_string(image_data, content_type='image/jpeg')
+        blob.upload_from_string(image_data, content_type='image/png')
 
         print(f"Base64 string uploaded to {destination_blob_name}.")
         return True
