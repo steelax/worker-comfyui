@@ -10,6 +10,7 @@ comfy-manager-set-mode offline || echo "worker-comfyui - Could not set ComfyUI-M
 df -l
 
 wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/handler.py
+wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/rp_firebase_upload.py
 
 echo "worker-comfyui: Starting ComfyUI"
 
