@@ -10,7 +10,7 @@ def file_to_base64(file_path):
         encoded_string = base64.b64encode(file.read()).decode('utf-8')
     return encoded_string
 
-def upload_to_firebase(cert_file, bucket, data, destination_blob_name):
+def upload_to_firebase(bucket, data, destination_blob_name, cert_file='/runpod_volume/sd/scripts/cert.json'):
     """Uploads a file to the bucket from Base64 string."""
 
     cred = credentials.Certificate(cert_file)

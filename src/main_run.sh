@@ -8,8 +8,6 @@ export LD_PRELOAD="${TCMALLOC}"
 comfy-manager-set-mode offline || echo "worker-comfyui: Could not set ComfyUI-Manager network_mode" >&2
 
 
-
-
 echo "worker-comfyui: Getting Latest Scripts from Network Store"
 wget -O /cert.jsonhttps://raw.githubusercontent.com/steelax/worker-comfyui/firebase/cert.json
 cp /cert.json /runpod_volume/sd/cert.json

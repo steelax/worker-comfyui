@@ -15,6 +15,10 @@ import tempfile
 import socket
 import traceback
 
+from tests.test_serverless.test_utils.test_download import JOB_ID
+
+from rp_firebase_upload import upload_to_firebase
+
 # Time to wait between API check attempts in milliseconds
 COMFY_API_AVAILABLE_INTERVAL_MS = 50
 # Maximum number of API check attempts
@@ -715,6 +719,7 @@ def handler(job):
 
                         if os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"):
                             print(os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"))
+                            upload_to_firebase(os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"),image_bytes,f'Inputs/{job_id}/{job_id.png}')
                             return_base = False
                         if return_base:
                             # Return as base64 string
