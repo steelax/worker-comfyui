@@ -13,6 +13,7 @@ def file_to_base64(file_path):
     return encoded_string
 
 def upload_to_firebase(bucket_url, data, destination_blob_name, cert):
+    print(data)
     json_credentials = json.loads(cert)
     """Uploads a file to the bucket from Base64 string."""
     print(destination_blob_name)
