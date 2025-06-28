@@ -87,6 +87,5 @@ WORKDIR /comfyui
 # Create necessary directories upfront
 RUN mkdir -p models/checkpoints models/vae models/unet models/clip models/clip models/insightface models/insightface/models models/insightface/models/antelopev2 models/instantid models/instantid models/controlnet models/ipadapter custom_nodes
 
-RUN export BUCKET_ENDPOINT_URL=https://podlax.s3.eu-west-2.amazonaws.com/
 
 CMD ["/start.sh"]

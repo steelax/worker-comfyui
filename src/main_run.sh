@@ -19,8 +19,6 @@ if [ "$SERVE_API_LOCALLY" == "true" ]; then
 else
 
   echo "INITIALISATION worker-comfyui: Getting Latest Scripts from Network Store"
-  wget -O /cert.json https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/cert.json
-  echo "INITIALISATION worker-comfyui: cert.json updated"
 
   wget -O /rp_firebase_upload.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/rp_firebase_upload.py
   echo "INITIALISATION -comfyui: rp_firebase_upload.py updated"

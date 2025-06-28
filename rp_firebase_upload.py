@@ -1,3 +1,5 @@
+import json
+
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import storage
@@ -10,10 +12,10 @@ def file_to_base64(file_path):
         encoded_string = base64.b64encode(file.read()).decode('utf-8')
     return encoded_string
 
-def upload_to_firebase(bucket_url, data, destination_blob_name, cert_file='/runpod_volume/sd/scripts/cert.json'):
+def upload_to_firebase(bucket_url, data, destination_blob_name, cert):
     """Uploads a file to the bucket from Base64 string."""
     print(destination_blob_name)
-    cred = credentials.Certificate(cert_file)
+    cred = credentials.Certificate(cert)
     firebase_admin.initialize_app(cred, {
         'storageBucket': bucket_url
     })
