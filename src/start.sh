@@ -9,6 +9,8 @@ comfy-manager-set-mode offline || echo "worker-comfyui - Could not set ComfyUI-M
 
 df -l
 
+wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/handler.py
+
 echo "worker-comfyui: Starting ComfyUI"
 
 # Allow operators to tweak verbosity; default is DEBUG.
