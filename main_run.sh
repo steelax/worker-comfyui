@@ -8,26 +8,26 @@ export LD_PRELOAD="${TCMALLOC}"
 comfy-manager-set-mode offline || echo "worker-comfyui: Could not set ComfyUI-Manager network_mode" >&2
 
 
-echo "worker-comfyui: Getting Latest Scripts from Network Store"
+echo "INITIALISATION worker-comfyui: Getting Latest Scripts from Network Store"
 wget -O /cert.json https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/cert.json
 cp /cert.json /runpod_volume/sd/cert.json
-echo "worker-comfyui: handler.py updated"
+echo "INITIALISATIONworker-comfyui: handler.py updated"
 
 wget -O /rp_firebase_upload.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/rp_firebase_upload.py
 cp /rp_firebase_upload.py /runpod_volume/sd/rp_firebase_upload.py
-echo "worker-comfyui: rp_firebase_upload.py updated"
+echo "INITIALISATION -comfyui: rp_firebase_upload.py updated"
 
 
 wget -O /handler.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/handler.py
 cp /handler.py /runpod_volume/sd/handler.py
-echo "worker-comfyui: handler.py updated"
-echo "worker-comfyui: COMPLETE: Getting Latest Scripts from Network Store"
+echo "INITIALISATION worker-comfyui: handler.py updated"
+echo "INITIALISATION worker-comfyui: COMPLETE: Getting Latest Scripts from Network Store"
 
-echo "worker-comfyui: Copying Custom Nodes from Network Store"
+echo "INITIALISATION worker-comfyui: Copying Custom Nodes from Network Store"
 cp /runpod_volume/sd/custom_nodes/ / -r
-echo "worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store"
+echo "INITIALISATIONworker-comfyui: COMPLETE: Copying Custom Nodes from Network Store"
 
-echo "worker-comfyui: Starting ComfyUI"
+echo "INITIALISATION worker-comfyui: Starting ComfyUI"
 # Allow operators to tweak verbosity; default is DEBUG.
 : "${COMFY_LOG_LEVEL:=DEBUG}"
 
