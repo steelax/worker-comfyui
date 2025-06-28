@@ -14,6 +14,7 @@ wget -O /rp_firebase_upload.py https://github.com/steelax/worker-comfyui/blob/fi
 echo "worker-comfyui: rp_firebase_upload.py updated"
 
 wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/handler.py
+wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/rp_firebase_upload.py
 
 echo "worker-comfyui: Starting ComfyUI"
 

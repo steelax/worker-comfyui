@@ -711,11 +711,12 @@ def handler(job):
                                         print(
                                             f"worker-comfyui - Error removing temp file {temp_file_path}: {rm_err}"
                                         )
-                            return False
+                            return_base = False
 
                         if os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"):
-                                print("firebase_env_var_found")
-                        if return_base == True:
+                            print(os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"))
+                            return_base = False
+                        if return_base:
                             # Return as base64 string
                             try:
                                 base64_image = base64.b64encode(image_bytes).decode(
