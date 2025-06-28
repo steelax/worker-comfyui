@@ -60,6 +60,9 @@ WORKDIR /
 ADD src/start.sh test_input.json ./
 RUN chmod +x /start.sh
 
+RUN wget https://huggingface.co/AlienMachineAI/insightface-0.7.3-cp312-cp312-linux_x86_64.whl/resolve/main/insightface-0.7.3-cp312-cp312-linux_x86_64.whl
+RUN pip uninstall insightface
+RUN pip install insightface-0.7.3-cp312-cp312-linux_x86_64.whl
 # Install Python runtime dependencies for the handler
 RUN uv pip install runpod requests websocket-client firebase-admin
 
@@ -96,6 +99,7 @@ RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom
 
 
 WORKDIR /comfyui/models/insightface/models
+
 RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip
 
 RUN unzip antelopev2.zip
