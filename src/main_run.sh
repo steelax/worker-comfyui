@@ -32,7 +32,7 @@ else
   echo "Getting Dirs 2"
   ls /runpod-volume/sd/custom_nodes
   echo "Getting Dirs 3"
-  ls /runpod-volume/sd/scripts
+  ls /comfyui/
 
   wget -O /handler.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/handler.py
   cp /handler.py /runpod_volume/sd/scripts/handler.py
@@ -46,7 +46,7 @@ else
   echo "INITIALISATION worker-comfyui: Getting Latest Scripts from git"
   wget -O /launch_comfy.sh https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/src/launch_comfy.sh
 
-  cp /runpod_volume/sd/custom_nodes/ / -r ;
+  cp /runpod_volume/sd/custom_nodes/ /comfyui/ -r ;
 
   echo "INITIALISATION worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store";
 
