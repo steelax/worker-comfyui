@@ -1,32 +1,7 @@
 #!/usr/bin/env bash
 
-# Use libtcmalloc for better memory management
-TCMALLOC="$(ldconfig -p | grep -Po "libtcmalloc.so.\d" | head -n 1)"
-export LD_PRELOAD="${TCMALLOC}"
-
-# Ensure ComfyUI-Manager runs in offline network mode inside the container
-comfy-manager-set-mode offline || echo "worker-comfyui - Could not set ComfyUI-Manager network_mode" >&2
-
-echo "worker-comfyui: Getting Latest Scripts from Network Store"
-wget -O /handler.py https://github.com/steelax/worker-comfyui/blob/firebase/handler.py
-echo "worker-comfyui: handler.py updated"
-wget -O /rp_firebase_upload.py https://github.com/steelax/worker-comfyui/blob/firebase/rp_firebase_upload.py
-echo "worker-comfyui: rp_firebase_upload.py updated"
-
-echo "worker-comfyui: Starting ComfyUI"
-
-# Allow operators to tweak verbosity; default is DEBUG.
-: "${COMFY_LOG_LEVEL:=DEBUG}"
-
-# Serve the API and don't shutdown the container
-if [ "$SERVE_API_LOCALLY" == "true" ]; then
-    python -u /comfyui/main.py --disable-auto-launch --disable-metadata --listen --verbose "${COMFY_LOG_LEVEL}" --log-stdout &
-
-    echo "worker-comfyui: Starting RunPod Handler"
-    python -u /handler.py --rp_serve_api --rp_api_host=0.0.0.0
-else
-    python -u /comfyui/main.py --disable-auto-launch --disable-metadata --verbose "${COMFY_LOG_LEVEL}" --log-stdout &
-
-    echo "worker-comfyui: Starting RunPod Handler"
-    python -u /handler.py
-fi
+echo "worker-comfyui: getting latest shell script"
+wget -O /main_run.sh https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/main_run.sh
+chmod +x /main_run.sh  # Ensure the downloaded script is executable
+echo "worker-comfyui: running latest shell script"
+/main_run.sh
