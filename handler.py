@@ -721,7 +721,7 @@ def handler(job):
                         if os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"):
                             bucket_name = os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL")
                             cert = os.environ.get("FIREBASE_CERT")
-                            upload_to_firebase(bucket_name,image_bytes,f'Outputs/{job_user_id}/{job_id}.png',cert)
+                            upload_to_firebase(bucket_name,image_bytes,f'users/{job_user_id}/outputs/{job_id}.png',cert)
                             return_base = False
                         if return_base:
                             # Return as base64 string
