@@ -9,15 +9,20 @@ comfy-manager-set-mode offline || echo "worker-comfyui: Could not set ComfyUI-Ma
 
 
 
+
 echo "worker-comfyui: Getting Latest Scripts from Network Store"
-wget -O /handler.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/handler.py
-cp /handler.py /runpod_volume/sd/handler.py
+wget -O /cert.jsonhttps://raw.githubusercontent.com/steelax/worker-comfyui/firebase/cert.json
+cp /cert.json /runpod_volume/sd/cert.json
 echo "worker-comfyui: handler.py updated"
 
 wget -O /rp_firebase_upload.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/rp_firebase_upload.py
 cp /rp_firebase_upload.py /runpod_volume/sd/rp_firebase_upload.py
 echo "worker-comfyui: rp_firebase_upload.py updated"
 echo "worker-comfyui: COMPLETE: Getting Latest Scripts from Network Store"
+
+wget -O /handler.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/handler.py
+cp /handler.py /runpod_volume/sd/handler.py
+echo "worker-comfyui: handler.py updated"
 
 echo "worker-comfyui: Copying Custom Nodes from Network Store"
 cp /runpod_volume/sd/custom_nodes/ / -r
