@@ -718,8 +718,8 @@ def handler(job):
                             return_base = False
 
                         if os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"):
-                            print(os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"))
-                            upload_to_firebase(os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL"),image_bytes,f'Inputs/{job_id}/{job_id.png}')
+                            bucket_name = os.environ.get("FIREBASE_BUCKET_ENDPOINT_URL")
+                            upload_to_firebase(bucket_name,image_bytes,f'Inputs/{job_id}/{job_id.png}')
                             return_base = False
                         if return_base:
                             # Return as base64 string
