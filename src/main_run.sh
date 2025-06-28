@@ -27,8 +27,10 @@ else
   cp /rp_firebase_upload.py /runpod_volume/sd/scripts/rp_firebase_upload.py
   echo "INITIALISATION -comfyui: rp_firebase_upload.py updated"
 
-  echo "getting dirs"
+  echo "Getting Dirs"
   ls /runpod-volume/sd
+  echo "Getting Dirs 2"
+  ls /runpod-volume/sd/custom_nodes
 
   wget -O /handler.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/handler.py
   cp /handler.py /runpod_volume/sd/scripts/handler.py
