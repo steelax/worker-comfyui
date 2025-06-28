@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "podlax-serverless-image-oylm5z",
+  "private_key_id": "92405b53da7718bf29b6c49354353c6b2a855e4c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9pmOrFYO7e77Q\nvob3R9D4j9NVgfLJgv7mtNG3lzVH7VYvTWqKhiNln0HwbvxPf39kABy2sejuvzrS\nMqwtiYTEgV7dNC9ZNbo6F7vUe82OGobSe/bb/P6NbIpUf8TuUcbpfEasxNRPUjtw\nkiJbBaWRFnEkVHZrMsTnFecNr9gVHtmkul27d+232jUOgmP+SAakcjwFZF/VVSXK\nEF0G2H4ALCveenKimEChtspRKvo35s3HkD1mX/M68Bojh614T3kvdzIhjnF/y49L\nUNIyXntKL7cglFwmuJ1KrQ8jo4/SgAxFgfu+GKDTBPkUenn3d3UQ6USj/qBhoT5O\nRhFqL0u3AgMBAAECggEASD3sJH0PD6ldL/4LwoFwWGbNHXrhRaKpP6+sXW9zg+Ek\nHeOzDG55aFoIj7JvWUcbezfRuERAE0Xz/aMA1F3YndQcE04wJR7iwANPcOryC8oO\nBnrjN7yBKNUqQnLjTNcI2uMUtvZJW6fa7ZA1FxApGAIA+lJUQ5R0zgQZXizYNn7A\nkfcq3yUeZwXykJqKSIpvSDBX1ZfsY+/IrALilVNLEH3Grz9hmp2RNDoy7QQQoLSn\nT8TYmWF9DURmJXFq2jVyEmGGC4LDk2f4v02vYfjNHFEv0Mhv3A5sPy34f6bU4GkT\nqlYMGrBTg4cy64szKnmi/BlINLgCSQH7kHbudj643QKBgQDcZ3Xi42uFFGaUcXXS\n3//6jNXxXG4EjFgM/W2MMrbvdevd/mzFAuNre5PhPjIaEdC2zpq37kr+4JPRI6J1\n3onx/Xgbzi+pGe+XinNO/eRajZZpa2ug5F5h9xIMY8VQbeiRQ8fbAZD6Qzl+R/yb\nnODUWNWWEmK15q0xggytBXDFfQKBgQDcR2glmtV+vaDDDtpnGCGvzhbSunrHbmAA\nQdW1SbDNzCn9DGtLK3q7bCE/ZRH+Hr27K1kughBTRD3tau/dD9WdWNBowbDWw0XP\nBPoN3uVOxfqNIzaubPkAAL3Fmavxju7rnOwrtib6kt0ouVMdeqlbsXRvigNqSbAK\nfwMz4zzMQwKBgQCAlg/N5jaFdqh+NE+0TqFOMLpkzTMWjjaUpYozACeAP0DzzArz\nScMaowdcoueiFAC7ln/njSvN1YIHww12TPYX63QWbM2bj5kbxVeOn0uJlQ9Kw7QQ\nMwvphbbO6aplSSolDfFckWZey7eQODllJDp7SLSbkHBshX9H4gK5MvJfFQKBgEYp\nEEj5+go2R+AY+QNhMkmWsLpJ3xVqWHV8gp8Na50A7FbG/92faaYMmMJiZMq16+ST\nuAISNzTuRXM7Xk7g3j8RrL/RAYxGAhQgF60XU541fMo7bw07dEvF8KvheFymE/9D\nqg16JQwmfv6bmJeJHCwyZ02nfdL6yXFuZwy90f2VAoGAZdpGqwrbT2BSiXGV6rlV\n3jP6lTk4ax/XkOAG2CY/h/uuis3YZpTGCGPM17buTu7S14wyyITmc9RgvpKSDsE9\nkZpkFtkUG5x4TtHjIyKKlAFXXY2HLsOYmvIAWpvl516Hg9UKkDflGC722abfUs3Q\nvCxFi96gDYrmDWRWVa2TL98=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@podlax-serverless-image-oylm5z.iam.gserviceaccount.com",
+  "client_id": "102546280369558784702",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40podlax-serverless-image-oylm5z.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
