@@ -94,7 +94,6 @@ RUN git clone https://github.com/cubiq/ComfyUI_IPAdapter_plus.git custom_nodes/C
 RUN git clone https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git custom_nodes/Derfuu_ComfyUI_ModdedNodes
 RUN git clone https://github.com/cubiq/ComfyUI_essentials.git custom_nodes/ComfyUI_essentials
 RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git custom_nodes/comfyui_controlnet_aux
-RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
 RUN git clone https://github.com/ltdrdata/was-node-suite-comfyui.git custom_nodes/was-node-suite-comfyui
 RUN git clone https://github.com/neverbiasu/ComfyUI-SAM2.git custom_nodes/ComfyUI-SAM2
