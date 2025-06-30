@@ -96,7 +96,8 @@ RUN git clone https://github.com/cubiq/ComfyUI_essentials.git custom_nodes/Comfy
 RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git custom_nodes/comfyui_controlnet_aux
 RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
-RUN git clone https://github.com/ltdrdata/was-node-suite-comfyui custom_nodes/was-node-suite-comfyui
+RUN git clone https://github.com/ltdrdata/was-node-suite-comfyui.git custom_nodes/was-node-suite-comfyui
+RUN git clone https://github.com/neverbiasu/ComfyUI-SAM2.git custom_nodes/ComfyUI-SAM2
 
 
 WORKDIR /comfyui/models/insightface/models

@@ -15,3 +15,5 @@ runpod_worker_comfy:
   rembg: models/rembg/
   clipseg: models/clipseg/
   insightface: models/insightface/
+  sam2: models/sam2/
+  grounding-dino: models/grounding-dino
