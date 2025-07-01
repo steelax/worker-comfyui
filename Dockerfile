@@ -66,7 +66,7 @@ RUN pip install insightface-0.7.3-cp312-cp312-linux_x86_64.whl
 # Install Python runtime dependencies for the handler
 RUN uv pip install runpod requests websocket-client firebase-admin
 
-RUN pip install onnxruntime hydra-core>=1.3.2
+RUN pip install onnxruntime hydra-core>=1.3.2 numba addict
 # Add script to install custom nodes
 COPY scripts/comfy-node-install.sh /usr/local/bin/comfy-node-install
 RUN chmod +x /usr/local/bin/comfy-node-install
