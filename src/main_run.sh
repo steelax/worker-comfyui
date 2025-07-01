@@ -19,7 +19,7 @@ if [ "$SERVE_API_LOCALLY" == "true" ]; then
 else
 
   echo "INITIALISATION worker-comfyui: Getting Latest Scripts from Network Store"
-  pip install yapf
+  pip install yapf groundingdino-py
   wget -O /rp_firebase_upload.py https://raw.githubusercontent.com/steelax/worker-comfyui/firebase/rp_firebase_upload.py
   echo "INITIALISATION -comfyui: rp_firebase_upload.py updated"
 
