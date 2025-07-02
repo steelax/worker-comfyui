@@ -97,7 +97,7 @@ RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git custom_no
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
 RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
 RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack custom_nodes/ComfyUI-Impact-Pack
-
+RUN git https://github.com/sipherxyz/comfyui-art-venture custom_nodes/comfyui-art-venture
 
 WORKDIR /comfyui/models/insightface/models
 
