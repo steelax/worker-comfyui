@@ -98,7 +98,7 @@ RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom
 RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
 RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack custom_nodes/ComfyUI-Impact-Pack
 
-wdsawdsawdsawdsa
+
 WORKDIR /comfyui/models/insightface/models
 
 RUN wget https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip
