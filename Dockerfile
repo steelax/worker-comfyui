@@ -66,7 +66,7 @@ RUN pip install insightface-0.7.3-cp312-cp312-linux_x86_64.whl
 # Install Python runtime dependencies for the handler
 RUN uv pip install runpod requests websocket-client firebase-admin
 
-RUN pip install onnxruntime hydra-core>=1.3.2 numba addict timm yapf tqdm pillow>=9.4.0
+RUN pip install onnxruntime hydra-core>=1.3.2 numba addict timm yapf tqdm pillow>=9.4.0 piexif
 # Add script to install custom nodes
 COPY scripts/comfy-node-install.sh /usr/local/bin/comfy-node-install
 RUN chmod +x /usr/local/bin/comfy-node-install
@@ -97,7 +97,7 @@ RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git custom_no
 RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom_nodes/ComfyUI-load-image-from-url
 RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
 RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack custom_nodes/ComfyUI-Impact-Pack
-RUN git https://github.com/sipherxyz/comfyui-art-venture custom_nodes/comfyui-art-venture
+RUN git clone https://github.com/sipherxyz/comfyui-art-venture custom_nodes/comfyui-art-venture
 
 WORKDIR /comfyui/models/insightface/models
 
