@@ -26,6 +26,7 @@ else
   echo "INITIALISATION worker-comfyui: handler.py updated"
   echo "INITIALISATION worker-comfyui: COMPLETE: Getting Latest Scripts from Network Store"
 
+  pip install piexif
 
   echo "INITIALISATION worker-comfyui: COMPLETE: Copying Custom Nodes from Network Store"
 
