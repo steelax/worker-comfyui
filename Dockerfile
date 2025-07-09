@@ -98,6 +98,7 @@ RUN git clone https://github.com/tsogzark/ComfyUI-load-image-from-url.git custom
 RUN git clone https://github.com/BadCafeCode/masquerade-nodes-comfyui.git custom_nodes/masquerade-nodes-comfyui
 RUN git clone https://github.com/ltdrdata/ComfyUI-Impact-Pack custom_nodes/ComfyUI-Impact-Pack
 RUN git clone https://github.com/sipherxyz/comfyui-art-venture custom_nodes/comfyui-art-venture
+RUN git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite custom_nodes/ComfyUI-VideoHelperSuite
 
 WORKDIR /comfyui/models/insightface/models
 
